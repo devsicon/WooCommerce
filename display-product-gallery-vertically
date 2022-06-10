@@ -1,0 +1,8 @@
+//  Display Product Gallery Vertically (Single Product Page)
+// Also need to add custom css for styling
+
+add_filter ( 'woocommerce_product_thumbnails_columns', 'devsicon_change_gallery_columns' );
+ 
+function devsicon_change_gallery_columns() {
+     return 1; 
+}
