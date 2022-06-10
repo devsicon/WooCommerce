@@ -1,0 +1,7 @@
+// Add Continue shopping button in single product page
+
+add_action( 'woocommerce_single_product_summary', 'bbloomer_continue_shopping_button', 31 );
+ 
+function bbloomer_continue_shopping_button() {
+  if ( wp_get_referer() ) echo '<a class="button continue" href="' . wp_get_referer() . '">Continue Shopping</a>';
+}
