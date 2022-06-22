@@ -11,3 +11,30 @@ function add_on_hover_shop_loop_image() {
     }
 }
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_on_hover_shop_loop_image' ); 
+
+
+// Required CSS
+
+ul.products li.product a img:nth-of-type(2) {
+    display: none;
+}
+ul.products li.product a:hover img:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+// or below CSS
+
+ul.products li.product a img+img {
+    display: none;
+}
+ul.products li.product a:hover img+img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
